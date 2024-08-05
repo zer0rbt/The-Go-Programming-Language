@@ -4,6 +4,9 @@
 // Exercise 2.4: Write a version of PopCount that counts bits by shifting its argument through 64
 //bit positions, testing the rightmost bit each time. Compare its performance to the table-lookup version.
 
+// Exercise 2.5: The expression x&(x-1) clears the rightmost non-zero bit of x. Write a version
+// of PopCount that counts bits by using this fact, and assess its performance.
+
 package popcount
 
 // pc[i] is the population count of i.
@@ -43,6 +46,15 @@ func PopCount3(x uint64) int {
 		if (x & (1 << i)) != 0 {
 			count++
 		}
+	}
+	return count
+}
+
+// PopCount4 returns the population count (number of set bits) of x, but works different from PopCount. Ex2.5
+func PopCount4(x uint64) int {
+	var count int
+	for ; x != 0; count++ {
+		x &= x - 1
 	}
 	return count
 }
