@@ -4,13 +4,13 @@
 package main
 
 import (
-	"The-Go-Programming-Language/2_ProgramStructure/tempconv"
+	tempconv2 "The-Go-Programming-Language/2_ProgramStructure/conversions/tempconv"
 	"fmt"
 )
 
 func main() {
 	fmt.Printf("Absolute zero is %v, %v, or %v\n",
-		tempconv.AbsoluteZeroK, tempconv.KToF(tempconv.AbsoluteZeroK), tempconv.KToC(tempconv.AbsoluteZeroK))
+		tempconv2.AbsoluteZeroK, tempconv2.KToF(tempconv2.AbsoluteZeroK), tempconv2.KToC(tempconv2.AbsoluteZeroK))
 	fmt.Printf("But the lowest registred temperature on earth is %v, %v, or %v\n",
-		tempconv.Celsius(-93.2), tempconv.CToK(tempconv.Celsius(-93.2)), tempconv.KToF(tempconv.CToK(tempconv.Celsius(-93.2))))
+		tempconv2.Celsius(-93.2), tempconv2.CToK(tempconv2.Celsius(-93.2)), tempconv2.KToF(tempconv2.CToK(tempconv2.Celsius(-93.2))))
 }
