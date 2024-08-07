@@ -20,7 +20,7 @@ const (
 )
 
 func isDrawable(x float64, y float64) bool {
-	if math.IsNaN(x) || math.IsNaN(y) || math.IsInf(x, 0) || math.IsInf(y, 0) || math.IsInf(x, 1) || math.IsInf(y, 1) {
+	if math.IsNaN(x) || math.IsNaN(y) || math.IsInf(x, 0) || math.IsInf(y, 0) {
 		return false
 	}
 	return true
